@@ -20,6 +20,9 @@ namespace Feladat
         Excel.Application xlApp;
         Excel.Workbook xlWB;
         Excel.Worksheet xlSheet;
+
+        public object ActiveSheet { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +42,10 @@ namespace Feladat
 
             xlApp.Visible = true;
             xlApp.UserControl = true;
+
+            // nem tudtam befejezni, kell ide még egy sor Excel.Range headerRange = xlSheet
+            headerRange.Font.Italics = true;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
