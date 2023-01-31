@@ -74,8 +74,12 @@ namespace Feladat
         {
             string[] headers = new string[]
             {
-
-            }
+                "ID",
+                "ki",
+                "mit",
+                "ki_datum",
+                "vissza_datum"
+            };
         }
     }
 }
