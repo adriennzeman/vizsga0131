@@ -18,6 +18,8 @@ namespace Feladat
         {
             InitializeComponent();
             LoadData();
+            dvdDataGridView.DataSource = kolcsonzesek;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,6 +30,18 @@ namespace Feladat
         private void LoadData ()
         {
             kolcsonzesek = context.kolcsonzesek.ToList();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void szuresButton_Click(object sender, EventArgs e)
+        {
+            DateTime datum = kolcsonzesDateTimePicker.Value;
+            kolcsonzesek = context.kolcsonzesek.Where(x => x.ki_datum <= datum && (x.vissza_datum == null || x.vissza_datum >= datum)).ToList();
+            dvdDataGridView.DataSource = kolcsonzesek;
         }
     }
 }
