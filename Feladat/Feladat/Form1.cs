@@ -12,9 +12,22 @@ namespace Feladat
 {
     public partial class Form1 : Form
     {
+        List<kolcsonzesek> kolcsonzesek;
+        dvd_magyarEntities context = new dvd_magyarEntities();
         public Form1()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadData ()
+        {
+            kolcsonzesek = context.kolcsonzesek.ToList();
         }
     }
 }
