@@ -33,6 +33,7 @@ namespace Feladat
             this.kolcsonzesDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.szuresButton = new System.Windows.Forms.Button();
             this.dvdDataGridView = new System.Windows.Forms.DataGridView();
+            this.exportButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvdDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,22 @@ namespace Feladat
             this.dvdDataGridView.TabIndex = 3;
             this.dvdDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(218, 293);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(75, 23);
+            this.exportButton.TabIndex = 4;
+            this.exportButton.Text = "Excel export";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exportButton);
             this.Controls.Add(this.dvdDataGridView);
             this.Controls.Add(this.szuresButton);
             this.Controls.Add(this.kolcsonzesDateTimePicker);
@@ -95,6 +107,7 @@ namespace Feladat
         private System.Windows.Forms.DateTimePicker kolcsonzesDateTimePicker;
         private System.Windows.Forms.Button szuresButton;
         private System.Windows.Forms.DataGridView dvdDataGridView;
+        private System.Windows.Forms.Button exportButton;
     }
 }
 
